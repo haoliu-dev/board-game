@@ -1,13 +1,12 @@
 import './App.css';
-import HexMap from './engine/hexmap';
-
+import Gameboard from './Gameboard.js'
 function App() {
-  let a = new HexMap();
-  console.log(a);
   return (
     <div className="App">
+
+      <Gameboard></Gameboard>
       <header className="App-header">
-        Nothing yet 
+
       </header>
     </div>
   );
