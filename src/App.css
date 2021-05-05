@@ -7,3 +7,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.hextile-container {
+  position: relative;
+}
+
+.hextile {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  border: solid thin silver;
+  width: 64px;
+  height: 64px;
+}
+.hextile:hover {
+  background-color: tan;
+  cursor:pointer;
+}

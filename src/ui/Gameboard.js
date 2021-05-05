@@ -1,6 +1,7 @@
 
 import React from 'react';
-import HexMap from './engine/hexmap';
+import HexMap from '../engine/hexmap';
+import HextileUI from './HextileUI';
 
 export default class Gameboard extends React.Component {
   constructor(props) {
@@ -11,14 +12,14 @@ export default class Gameboard extends React.Component {
   }
   render() {
     const tiles = this.state.map.tiles.map(t =>
-      <span>({t.x},{t.y})</span>
+      <HextileUI key={t.x + ":" + t.y} hextile={t}></HextileUI>
     );
     return (
       <div>
         map created: width = {this.state.map.width}, height = {this.state.map.height}
-        <p>
+        <div className="hextile-container">
           {tiles}
-        </p>
+        </div>
       </div>
     );
 
