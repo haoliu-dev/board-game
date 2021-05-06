@@ -1,5 +1,5 @@
 import Entity from "./entity";
-import TileOverlay from "./overlay";
+import TileOverlay from "./tileOverlay";
 import Terrain from "./terrain";
 
 // FIXME: dynamically load it from game spec file
@@ -14,9 +14,7 @@ export default class HexTile {
   elevation: number = 0;
 
   terrain: Terrain;
-  // on-groud overlays: can be resources, building and plants
-  overlay: Array<TileOverlay>;
-  // movable objects on this tile
+  overlays: Array<TileOverlay>;
   entities: Array<Entity>;
 
 
@@ -25,7 +23,7 @@ export default class HexTile {
     this.x = x;
     this.y = y;
     this.terrain = new Terrain(TERRAINS[Math.floor(Math.random() * TERRAINS.length)]);
-    this.overlay = [];
+    this.overlays = [];
     this.entities = [];
   }
 }
