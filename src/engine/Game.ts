@@ -8,6 +8,7 @@ import HexMap from "./HexMap";
 
 export default class Game {
   map: HexMap;
+  // players
 
   // init a new empty game(in game editor)
   constructor(mapWidth:number, mapHeight:number) {

@@ -1,4 +1,4 @@
-export default class Building {
+export default class TileImprovement {
   name: string;
   level: number;
   constructor(name:string, level:number) {

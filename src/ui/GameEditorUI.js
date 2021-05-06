@@ -1,6 +1,6 @@
 import React from 'react';
 import Game from '../engine/Game';
-import Building from '../engine/Building';
+import TileImprovement from '../engine/TileImprovement';
 import Terrain from '../engine/Terrain';
 import HexmapUI from './HexmapUI.js';
 
@@ -28,12 +28,12 @@ export default class GameEditorUI extends React.Component {
 
       )
     });
-    const buildingBrushes = ['city', 'farm', 'pier', 'market'].map(buildingName => {
+    const tileImprovementBrushes = ['city', 'pier', 'market', 'barrack', '关隘 '].map(tileImprovementName => {
       return (
-        <button key={`building-${buildingName}`}
-          onClick={() => this.toggleBrush({ type: 'building', name: buildingName })}
-          className={this.state.brush?.name === buildingName ? 'selected' : ''}>
-          {buildingName}
+        <button key={`tileImprovement-${tileImprovementName}`}
+          onClick={() => this.toggleBrush({ type: 'tileImprovement', name: tileImprovementName })}
+          className={this.state.brush?.name === tileImprovementName ? 'selected' : ''}>
+          {tileImprovementName}
         </button>
 
       )
@@ -42,7 +42,7 @@ export default class GameEditorUI extends React.Component {
       <div>
         <div className="toolbar">
           {terrainBrushes}
-          | {buildingBrushes}
+          | {tileImprovementBrushes}
         </div>
         <HexmapUI
           mode='edit'
@@ -61,7 +61,7 @@ export default class GameEditorUI extends React.Component {
 
   createEventHandlers() {
     // on Hextile clicked:
-    // if a brush is selected, replce the tile terrain or add building
+    // if a brush is selected, replce the tile terrain or add tileImprovement
     // it requires the Hextile component to be passed in so we can force update the component
     this.onTileClick = (component, hextile) => {
       const brush = this.state.brush || {};
@@ -71,16 +71,16 @@ export default class GameEditorUI extends React.Component {
           hextile.terrain = new Terrain(this.state.brush.name);
           component.forceUpdate();
           break;
-        case 'building':
+        case 'tileImprovement':
           // if same buildeing is there, upgrade to up to level 3, then remove it
-          if(hextile.building?.name === brush.name) {
-            if(hextile.building.level<3) {
-              hextile.building.level+=1;
+          if(hextile.tileImprovement?.name === brush.name) {
+            if(hextile.tileImprovement.level<3) {
+              hextile.tileImprovement.level+=1;
             } else {
-              hextile.building = null;
+              hextile.tileImprovement = null;
             }
-          } else { // otherwise, add the new building
-            hextile.building = new Building(brush.name, 1);
+          } else { // otherwise, add the new tileImprovement
+            hextile.tileImprovement = new TileImprovement(brush.name, 1);
 
           }
           component.forceUpdate();

@@ -1,6 +1,7 @@
 import Entity from "./Entity";
 import TileOverlay from "./TileOverlay";
 import Terrain from "./Terrain";
+import TileImprovement from "./TileImprovement";
 
 // FIXME: dynamically load it from game spec file
 const TERRAINS = ['plain', 'plain-grass', 'plain-tree', 'hill', 'hill-grass', 'hill-tree', 'water'];
@@ -15,7 +16,7 @@ export default class HexTile {
 
   terrain: Terrain;
   overlays: Array<TileOverlay>;
-  building: String|null;
+  tileImprovement: TileImprovement|null;
   entities: Array<Entity>;
 
 
@@ -24,7 +25,7 @@ export default class HexTile {
     this.x = x;
     this.y = y;
     this.terrain = new Terrain(TERRAINS[Math.floor(Math.random() * TERRAINS.length)]);
-    this.building = null;
+    this.tileImprovement = null;
     this.overlays = [];
     this.entities = [];
   }
