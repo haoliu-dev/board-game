@@ -3,6 +3,7 @@
   min-height: 100vh;
 
   background-color: #282c34;
+  user-select: none;
 
   font-size: calc(10px + 2vmin);
   color: white;
@@ -13,6 +14,7 @@
 }
 
 .hextile {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   position: absolute;
@@ -21,6 +23,30 @@
   height: 64px;
 }
 .hextile:hover {
-  background-color: tan;
+  border: solid 2px red;
   cursor:pointer;
+}
+
+/* hextile */
+.terrain-plain {
+  background-color: rgb(117, 97, 5);
+}
+.terrain-plain-grass {
+  background-color: lightgreen;
+}
+.terrain-plain-tree {
+  background-color: green;
+}
+.terrain-hill {
+  background-color: gray;
+}
+.terrain-hill-grass {
+  background-color: grey;
+}
+.terrain-hill-tree {
+  background-color: silver;
+}
+
+.terrain-water {
+  background-color: aqua;
 }

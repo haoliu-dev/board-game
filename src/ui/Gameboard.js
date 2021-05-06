@@ -7,7 +7,7 @@ export default class Gameboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      map: new HexMap(10, 4),
+      map: new HexMap(12, 6),
     }
   }
   render() {

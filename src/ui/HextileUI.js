@@ -5,19 +5,24 @@ const TILE_HEIGHT_PX = 64;
 export default class HextileUI extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      hextile: props.hextile,
-    }
+    this.state = props.hextile;
   }
+
+
   render() {
-    const hextile = this.state.hextile;
+    const hextile = this.state;
     const top = TILE_WIDTH_PX * hextile.x;
     const left = TILE_HEIGHT_PX * hextile.y + ((hextile.x % 2 === 0) ? 0 : TILE_WIDTH_PX / 2);
     return (
-      <div className="hextile" style={{ left: left + "px", top: top + "px" }}>
-
+      <div className={`hextile terrain-${hextile.terrain.name}`} style={{ left: left + "px", top: top + "px" }} onClick={this.updateElevation}>
+        
       </div>
     );
 
+  }
+
+  // event handlers
+  updateElevation = () => {
+    this.setState({ elevation: this.state.elevation + 880 });
   }
 }
