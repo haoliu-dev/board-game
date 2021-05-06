@@ -1,6 +1,6 @@
-import Entity from "./entity";
-import TileOverlay from "./tileOverlay";
-import Terrain from "./terrain";
+import Entity from "./Entity";
+import TileOverlay from "./TileOverlay";
+import Terrain from "./Terrain";
 
 // FIXME: dynamically load it from game spec file
 const TERRAINS = ['plain', 'plain-grass', 'plain-tree', 'hill', 'hill-grass', 'hill-tree', 'water'];

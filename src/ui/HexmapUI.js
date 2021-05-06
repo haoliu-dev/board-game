@@ -1,6 +1,6 @@
 
 import React from 'react';
-import HexMap from '../engine/hexmap';
+import HexMap from '../engine/HexMap';
 import HextileUI from './HextileUI';
 
 export default class HexmapUI extends React.Component {

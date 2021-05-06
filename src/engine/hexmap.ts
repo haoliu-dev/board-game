@@ -1,4 +1,4 @@
-import HexTile from "./hextile";
+import HexTile from "./HexTile";
 
 /*
 A Hex-tile based map, like what we see in civilization 6, with the following traits
