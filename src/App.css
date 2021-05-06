@@ -1,4 +1,4 @@
-.App {
+.xApp {
   text-align: center;
   min-height: 100vh;
 
@@ -9,19 +9,33 @@
   color: white;
 }
 
+body {
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+
 .hextile-container {
-  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  border: solid thin blue;
+  user-select: none;
 }
 
 .hextile {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  position: absolute;
   border: solid thin silver;
   width: 64px;
   height: 64px;
 }
+
+.hextile.first-col{
+  margin-left:32px;
+}
+
 .hextile:hover {
   border: solid 2px red;
   cursor:pointer;
@@ -41,7 +55,7 @@
   background-color: gray;
 }
 .terrain-hill-grass {
-  background-color: grey;
+  background-color: rgb(118, 197, 122);
 }
 .terrain-hill-tree {
   background-color: silver;
