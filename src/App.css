@@ -16,6 +16,18 @@ body {
 
 }
 
+.toolbar {
+  display: flex;
+  flex-flow: row wrap;
+  user-select: none;
+}
+.toolbar>button {
+  font-size: 1em;
+}
+.toolbar>button.selected {
+  background-color: coral;
+}
+
 .hextile-container {
   display: flex;
   flex-flow: row wrap;
