@@ -3,7 +3,7 @@ import React from 'react';
 import HexMap from '../engine/hexmap';
 import HextileUI from './HextileUI';
 
-export default class Gameboard extends React.Component {
+export default class HexmapUI extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

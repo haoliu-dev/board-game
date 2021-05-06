@@ -24,6 +24,6 @@ export default class HextileUI extends React.Component {
 
   // event handlers
   updateElevation = () => {
-    alert(`you clicked a tile of ${this.state.terrain.name}`);
+    console.log(`you clicked a tile of ${this.state.terrain.name}`);
   }
 }

@@ -19,7 +19,6 @@ body {
 .hextile-container {
   display: flex;
   flex-flow: row wrap;
-  border: solid thin blue;
   user-select: none;
 }
 
