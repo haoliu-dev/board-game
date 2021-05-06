@@ -1,13 +1,12 @@
 
 import React from 'react';
-import HexMap from '../engine/HexMap';
 import HextileUI from './HextileUI';
 
 export default class HexmapUI extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      map: new HexMap(20, 16),
+      map: props.map,
     }
   }
   render() {

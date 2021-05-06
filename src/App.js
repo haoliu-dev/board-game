@@ -1,10 +1,10 @@
 import './App.css';
-import HexmapUI from './ui/HexmapUI.js'
+import GameUI from './ui/GameUI.js'
 function App() {
   return (
     <div className="App">
 
-      <HexmapUI></HexmapUI>
+      <GameUI></GameUI>
       <header className="App-header">
 
       </header>
