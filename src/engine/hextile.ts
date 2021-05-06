@@ -15,6 +15,7 @@ export default class HexTile {
 
   terrain: Terrain;
   overlays: Array<TileOverlay>;
+  building: String|null;
   entities: Array<Entity>;
 
 
@@ -23,6 +24,7 @@ export default class HexTile {
     this.x = x;
     this.y = y;
     this.terrain = new Terrain(TERRAINS[Math.floor(Math.random() * TERRAINS.length)]);
+    this.building = null;
     this.overlays = [];
     this.entities = [];
   }

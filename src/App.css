@@ -41,6 +41,7 @@ body {
   border: solid thin silver;
   width: 64px;
   height: 64px;
+  font-size: 14px;
 }
 
 .hextile.first-col{
