@@ -15,7 +15,7 @@ export default class HextileUI extends React.Component {
   render() {
     const hextile = this.props.hextile;
     const firstColClassName = ((hextile.y === 0) && (hextile.x % 2 === 1)) ? 'first-col' : '';
-    const tileImprovement = hextile.tileImprovement ? (<span>{`${hextile.tileImprovement.name}(${hextile.tileImprovement.level})`}</span>) : null;
+    const tileImprovement = hextile.tileImprovement ? (<span>+{`${hextile.tileImprovement.name}(${hextile.tileImprovement.level})`}</span>) : null;
     return (
       <div className={`hextile ${firstColClassName} terrain-${hextile.terrain.name}`}
         onClick={() => this.onClick(this, this.props.hextile)}

@@ -5,14 +5,20 @@ of this per game.
 */
 
 import HexMap from "./HexMap";
+import Registry from "./Registry";
+import Terrain from "./Terrain";
 
 export default class Game {
   map: HexMap;
-  // players
+  // game spec registry
+  terrainRegistry: Registry<Terrain>;
+  
+
 
   // init a new empty game(in game editor)
   constructor(mapWidth:number, mapHeight:number) {
     this.map = new HexMap(mapWidth, mapHeight);
+    this.terrainRegistry = new Registry();
   }
 
 }
