@@ -45,9 +45,7 @@ export default class GameEditorUI extends React.Component {
           | {tileImprovementBrushes}
         </div>
         <HexmapUI
-          mode='edit'
           map={this.state.game.map}
-          brush={this.state.brush}
           onTileClick={this.onTileClick}
         ></HexmapUI>
       </div>
